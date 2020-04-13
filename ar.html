@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs>
+    <a-scene
+      embedded
+      arjs
+      artoolkit="sourceType: webcam;"
+      renderer="logarithmicDepthBuffer: true;"
+    >
       <a-marker preset="hiro">
         <a-entity
           id="butterfly"
           class="butterfly1"
           gltf-model="./butterflies/butterfly1.gltf"
           position="0 0 1"
-          scale="0.5 0.5 0.5"
-          rotation="60 0 360"
-          animation="property: rotation; to: 60 0 0; loop: 1; startEvents: click; dur: 2000;"
+          scale="1 1 1"
+          rotation="60 0 0"
+          animation="property: rotation; to: 60 360 360; loop: 1; startEvents: click; dur: 2000;"
         >
         </a-entity>
       </a-marker>

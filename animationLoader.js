@@ -1,7 +1,7 @@
 const butterfly = document.querySelector("#butterfly");
 
 const randomiser = () => {
-  return Math.floor(Math.random() * 2) + 1;
+  return Math.floor(Math.random() * 15) + 1;
 };
 
 const thisValue = "butterfly.components.gltf-model.attrValue";
