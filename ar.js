@@ -2,7 +2,8 @@ const targetEl = document.querySelector("#butterfly");
 const textEl = document.querySelector("#text");
 const scanTextEl = document.querySelector("#promptToScan");
 const catchTextEl = document.querySelector("#promptToCatch");
-const gotItTextEl = document.querySelector("#catchedIt");
+const congratsText = document.querySelector("#text");
+
 const refObj = {};
 let catched = false;
 
@@ -10,10 +11,17 @@ targetEl.addEventListener("click", function () {
   console.log(refObj);
   if (catched === false) {
     addToRefObj(targetEl);
-    textEl.setAttribute("text", "value", `Caught: ${refObj[targetEl.id]}`);
     targetEl.components.animation.attrValue.enabled = true;
     catchTextEl.object3D.visible = false;
     catched = true;
+    congratsText.setAttribute("value", `You caught a Butterfly!`);
+    twoSecondPrompt(congratsText);
+  } else {
+    congratsText.setAttribute(
+      "value",
+      `You already caught this butterfly! Reload the page for a chance to see a different one!`
+    );
+    twoSecondPrompt(congratsText);
   }
 });
 
@@ -42,12 +50,10 @@ const addToRefObj = (target) => {
   return refObj;
 };
 
-//how to create new element on page!
-
-// const newEntity = document.createElement("a-entity");
-// newEntity.setAttribute("geometry", {
-//   primitive: "box",
-//   height: 3,
-//   width: 1
-// });
-// targetEl.appendChild(newEntity);
+const twoSecondPrompt = (element) => {
+  element.object3D.visible = true;
+  setTimeout((event) => {
+    element.object3D.visible = false;
+    scanText.object3D.visible = true;
+  }, 4000);
+};

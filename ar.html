@@ -22,7 +22,7 @@
         <a-entity
           id="butterfly"
           class="butterfly1"
-          gltf-model="./butterflies/butterfly1.gltf"
+          gltf-model=""
           position="0 0 1"
           scale="1 1 1"
           rotation="60 0 0"
@@ -63,23 +63,16 @@
         >
         </a-text>
 
-        <a-text
-          id="catchedIt"
-          value="You got it! To see your butterfly, go into your collection!"
-          position="-0.4 0.65 -3"
-          scale="0.2 0.2 0.1"
-          visible="false"
-        >
-        </a-text>
-
         <a-entity
           id="text"
+          value=""
           text="value: Caught: 0"
           position="0.4 -0.5 -3"
         ></a-entity>
       </a-entity>
     </a-scene>
+
     <script src="animationLoader.js"></script>
-    <script src="./ar.js"></script>
+    <script type="module" src="./ar.js"></script>
   </body>
 </html>

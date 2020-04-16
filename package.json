@@ -1,0 +1,21 @@
+{
+  "name": "ardemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ar.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Norbs89/ardemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Norbs89/ardemo/issues"
+  },
+  "homepage": "https://github.com/Norbs89/ardemo#readme"
+}

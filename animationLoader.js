@@ -1,19 +1,21 @@
 const butterfly = document.querySelector("#butterfly");
+const marker1 = ["Midas", "Mother Of Pearl", "Mexican Bluewing"];
 
 const randomiser = () => {
-  return Math.floor(Math.random() * 15) + 1;
+  return Math.floor(Math.random() * 3);
 };
 
-const thisValue = "butterfly.components.gltf-model.attrValue";
 setTimeout(() => {
   butterfly.setAttribute(
     "gltf-model",
-    `./butterflies/butterfly${randomiser()}.gltf`
+    `https://raw.githubusercontent.com/Norbs89/ardemo/master/butterflies/${
+      marker1[randomiser()]
+    }.gltf`
   );
 }, 500);
 
 setTimeout(() => {
   butterfly.classList.value = butterfly
     .getAttribute("gltf-model")
-    .slice(14, -5);
+    .slice(68, -5);
 }, 1500);
