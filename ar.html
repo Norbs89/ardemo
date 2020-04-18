@@ -9,6 +9,7 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
@@ -44,38 +45,7 @@
         >
         </a-entity>
 
-        <a-entity
-          id="promptToScan"
-          position="0 -0.65 -3"
-          scale="1 1 1"
-          text="value: Find a marker to show a butterfly!; color: #fff; align: center; font: ./fonts/font5-msdf.json; fontImage: ./fonts/font5-msdf.png; negate: false"
-          geometry="primitive: plane; width: auto; height: auto"
-          material="color: #484A47; shader: flat; opacity: 0.2"
-        >
-        </a-entity>
-
-        <a-entity
-          id="promptToCatch"
-          position="0 0.65 -3"
-          scale="1 1 1"
-          text="value: Tap the screen to catch the butterfly!; color: #fff; align: center; font: ./fonts/font5-msdf.json; fontImage: ./fonts/font5-msdf.png; negate: false;"
-          geometry="primitive: plane; width: auto; height: auto"
-          material="color: #484A47; shader: flat; opacity: 0.2"
-          visible="false"
-        >
-        </a-entity>
-
-        <a-entity
-          id="text"
-          position="0 -0.65 -3"
-          scale="1 1 1"
-          text="value: ; color: #fff; align: center; font: ./fonts/font5-msdf.json; fontImage: ./fonts/font5-msdf.png; negate: false; wrapCount: 40"
-          geometry="primitive: plane; width: auto; height: auto"
-          material="color: #484A47; shader: flat; opacity: 0.2"
-          visible="false"
-        >
-        </a-entity>
-        <!-- <a-text
+        <a-text
           id="promptToScan"
           value="Find a marker to show a butterfly!"
           font="./fonts/font5-msdf.json"
@@ -83,27 +53,31 @@
           negate="false"
           position="-0.4 -0.65 -3"
           scale="0.2 0.2 0.2"
-        ></a-text> -->
+        ></a-text>
 
-        <!-- <a-text
+        <a-text
           id="promptToCatch"
           value="Tap the screen to catch the butterfly!"
           font="./fonts/font5-msdf.json"
           font-image="./fonts/font5-msdf.png"
           negate="false"
-          position="-0.4 0.65 -3"
+          position="0 0.65 -3"
           scale="0.2 0.2 0.2"
           visible="false"
+          wrapCount="50"
+          align="center"
         >
-        </a-text> -->
+        </a-text>
 
-        <!-- <a-text
+        <a-text
           id="text"
           value=""
+          font="./fonts/font5-msdf.json"
+          font-image="./fonts/font5-msdf.png"
           position="-0.4 -0.65 -3"
           scale="0.2 0.2 0.2"
           visible="false"
-        ></a-text> -->
+        ></a-text>
       </a-entity>
     </a-scene>
 
